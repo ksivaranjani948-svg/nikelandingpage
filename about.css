@@ -1,0 +1,174 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#0f0f0f;
+    color:white;
+}
+
+/* HEADER */
+
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:25px 10%;
+}
+
+.logo{
+    color:#ff5c00;
+    font-size:40px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:30px;
+    font-size:18px;
+
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#ff5c00;
+}
+
+/* ABOUT SECTION */
+
+.about{
+    min-height:85vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    gap:80px;
+
+    padding:50px 10%;
+}
+
+/* IMAGE */
+
+.about-image img{
+    width:450px;
+
+    filter:drop-shadow(0 0 25px #ff5c00);
+
+    animation:float 3s ease-in-out infinite;
+}
+
+/* FLOAT ANIMATION */
+
+@keyframes float{
+
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-20px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+}
+
+/* CONTENT */
+
+.about-content{
+    width:50%;
+}
+
+.about-content h1{
+    font-size:70px;
+    color:#ff5c00;
+
+    margin-bottom:20px;
+}
+
+.about-content p{
+    font-size:18px;
+    line-height:1.8;
+
+    color:#ccc;
+
+    margin-bottom:40px;
+}
+
+/* STATS */
+
+.stats{
+    display:flex;
+    gap:25px;
+}
+
+.box{
+    background:rgba(255,255,255,0.05);
+
+    border:1px solid rgba(255,255,255,0.1);
+
+    backdrop-filter:blur(10px);
+
+    padding:25px;
+
+    border-radius:20px;
+
+    width:160px;
+
+    text-align:center;
+
+    transition:0.3s;
+}
+
+.box:hover{
+    transform:translateY(-10px);
+
+    border-color:#ff5c00;
+
+    box-shadow:0 0 20px rgba(255,92,0,0.3);
+}
+
+.box h2{
+    color:#ff5c00;
+
+    margin-bottom:10px;
+
+    font-size:35px;
+}
+
+.box span{
+    color:#ddd;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+    .about{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .about-content{
+        width:100%;
+    }
+
+    .about-image img{
+        width:300px;
+    }
+
+    .stats{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .about-content h1{
+        font-size:50px;
+    }
+}
